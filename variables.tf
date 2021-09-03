@@ -10,10 +10,12 @@ variable "location" {
 
 variable "service_plan_name" {
   description = "Service plan name"
+  default = "demoappsp"
 }
 
 variable "app_name" {
   description = "Name of application"
+  default = "myappdemobookcloudpreact"
 }
 
 variable "sp_sku"{
