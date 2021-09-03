@@ -1,6 +1,6 @@
 variable "resource_groupe_name" {
   description = "Resource groupe name"
-  name = "RG_MyAPP_DemoTFCLOUD"
+  default = "RG_MyAPP_DemoTFCLOUD"
 }
 
 variable "location" {
