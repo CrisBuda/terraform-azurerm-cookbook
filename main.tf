@@ -1,13 +1,13 @@
-terraform {
-  backend "remote" {
-    hostname     = "app.terraform.io"
-    organization = "PreactDK"
+# terraform {
+#   backend "remote" {
+#     hostname     = "app.terraform.io"
+#     organization = "PreactDK"
 
-    workspaces {
-      name = "demo-app"
-    }
-  }
-}
+#     workspaces {
+#       name = "demo-app"
+#     }
+#   }
+# }
 # resource "random_password" "password" {
 #   length           = 16
 #   special          = true
@@ -26,11 +26,11 @@ provider "azurerm" {
 }
 
 
-# resource "azurerm_resource_group" "rg" {
-#   name     = "RG_MyAPP_DemoTFCLOUD"
-#   location = "West Europe"
+resource "azurerm_resource_group" "rg" {
+  name     = "RG_MyAPP_DemoTFCLOUD"
+  location = "West Europe"
 
-# }
+}
 # module "webapp" {
 #   source               = "app.terraform.io/PreactDK/webapp/azurerm"
 #   version              = "1.0.4"
