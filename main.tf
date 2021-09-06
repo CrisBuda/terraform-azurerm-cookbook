@@ -26,18 +26,18 @@ provider "azurerm" {
 }
 
 
-resource "azurerm_resource_group" "rg" {
-  name     = "RG_MyAPP_DemoTFCLOUD"
-  location = "West Europe"
+# resource "azurerm_resource_group" "rg" {
+#   name     = "RG_MyAPP_DemoTFCLOUD"
+#   location = "West Europe"
 
-}
-module "webapp" {
-  source               = "app.terraform.io/PreactDK/webapp/azurerm"
-  version              = "1.0.4"
-  service_plan_name    = "demoappsp"
-  app_name             = "myappdemobookcloudpreact"
-  location             = "West Europe"
-  resource_groupe_name = azurerm_resource_group.rg.name
-  sp_sku               = "Standard" #"Standard"
-  ftps_state           = "FtpsOnly"
-}
+# }
+# module "webapp" {
+#   source               = "app.terraform.io/PreactDK/webapp/azurerm"
+#   version              = "1.0.4"
+#   service_plan_name    = "demoappsp"
+#   app_name             = "myappdemobookcloudpreact"
+#   location             = "West Europe"
+#   resource_groupe_name = azurerm_resource_group.rg.name
+#   sp_sku               = "Standard" #"Standard"
+#   ftps_state           = "FtpsOnly"
+# }
